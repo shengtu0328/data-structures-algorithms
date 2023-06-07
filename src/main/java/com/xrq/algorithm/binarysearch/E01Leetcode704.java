@@ -2,6 +2,10 @@ package com.xrq.algorithm.binarysearch;
 
 public class E01Leetcode704 {
 
+    public static void main(String[] args) {
+        
+    }
+
     // 平衡版
     public int search1(int[] a, int target) {
         int i = 0, j = a.length;

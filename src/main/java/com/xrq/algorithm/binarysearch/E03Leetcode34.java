@@ -1,6 +1,10 @@
 package com.xrq.algorithm.binarysearch;
 
 public class E03Leetcode34 {
+
+    public static void main(String[] args) {
+        
+    }
     public int[] searchRange(int[] a, int target) {
         int x = left(a, target);
         if (x == -1) {
