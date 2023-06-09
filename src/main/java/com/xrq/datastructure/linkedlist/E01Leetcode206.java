@@ -50,6 +50,7 @@ public class E01Leetcode206 {
         }
     }
 
+    // 先 "递" 到最后一个节点，然后在每次 "归" 的过程中，都是对这最后一个操作，不断的在这个最后一个元素末尾追加当前元素
     // 方法3 - 递归
     public ListNode reverseList3(ListNode p) {
         if (p == null || p.next == null) {
@@ -100,7 +101,7 @@ public class E01Leetcode206 {
         ListNode o2 = new ListNode(2, o3);
         ListNode o1 = new ListNode(1, o2);
         System.out.println(o1);
-        ListNode n1 = new E01Leetcode206().reverseList(o1);
+        ListNode n1 = new E01Leetcode206().reverseList3(o1);
         System.out.println(n1);
     }
 
