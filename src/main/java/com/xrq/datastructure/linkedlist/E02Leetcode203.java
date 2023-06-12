@@ -4,6 +4,28 @@ package com.xrq.datastructure.linkedlist;
  * 根据值删除节点
  */
 public class E02Leetcode203 {
+
+    public ListNode removeElements0(ListNode head, int val) {
+
+
+        ListNode s = new ListNode(-1, head);
+        ListNode p1 = s;
+        ListNode p2 = p1.next;
+        while (p2 != null) {
+            if (p2.val == val) {
+                p1.next = p2.next;
+                p2 = p2.next;
+            } else {
+                p1 = p1.next;
+                p2 = p2.next;
+
+            }
+        }
+        return s.next;
+
+
+    }
+
     /**
      * 方法1
      *
@@ -50,7 +72,6 @@ public class E02Leetcode203 {
         ListNode head = ListNode.of(1, 2, 6, 3, 6);
 //        ListNode head = ListNode.of(7, 7, 7, 7);
         System.out.println(head);
-        System.out.println(new E02Leetcode203()
-                .removeElements(head, 6));
+        System.out.println(new E02Leetcode203().removeElements0(head, 6));
     }
 }
